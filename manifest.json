@@ -1,0 +1,22 @@
+{
+  "name": "Rednice",
+  "version": "1.0",
+  "description": "Rednice",
+  "permissions": ["storage", "declarativeContent", "activeTab"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://rpm.newrelic.com/accounts/*/traced_errors/*",
+        "https://redmine.teamo.ru/projects/teamo/issues/new"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
