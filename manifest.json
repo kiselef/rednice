@@ -1,22 +1,25 @@
 {
-  "name": "Rednice",
-  "version": "1.0",
-  "description": "Rednice",
-  "permissions": ["storage", "declarativeContent", "activeTab"],
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "content_scripts": [
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
     {
-      "matches": [
-        "https://rpm.newrelic.com/accounts/*/traced_errors/*",
-        "https://redmine.teamo.ru/projects/teamo/issues/new"
-      ],
-      "js": ["content.js"]
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
-  "manifest_version": 2
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
